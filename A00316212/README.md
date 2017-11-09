@@ -6,6 +6,7 @@
 **Correo:** daniel.barragan at correo.icesi.edu.co  
 **Estudiante:** Jhon Eduar Tobar Gómez  
 **Codigo:** A00316212  
+**URL Github:** https://github.com/Jhongomez6/so-exam2  
 
 ### Objetivos
 * Comprender los fundamentos que dan origen a las tecnologías de contenedores virtuales
