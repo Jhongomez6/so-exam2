@@ -99,10 +99,16 @@ Del mismo modo se haría para el otro servicio y quedará siempre el servicio re
 
 ### 5. Definiciones y comparación
 
+CPUQuota: Permite asignar una cuota de tiempo maxima a un proceso especifico. Esta dado en porcentaje y especifica cuánto tiempo de CPU debe obtener la unidad como máximo, en relación con el tiempo total de CPU disponible en una CPU.Utilice.
+
+CPUShares: Permite asignar un peso de tiempo compartido de CPU a un proceso especifico. Esta dado en bites y el rango permitido es de 2 a 262144. Asi mismo, el valor predeterminado es 1024. Con CPUShares el tiempo de CPU disponible se divide entre todas las unidades en relación con el peso de la CPU en tiempo compartido.
 
 
+Conclusión: Teniendo en cuenta todo el desarrollo de esta practica podemos concluir que ambas opciones tanto Quota como Shares nos permiten administrar los recursos de una CPU a conveniencia. SIn embargo, es mejor usar Quota cuando se debe fijar un limite maximo de uso de tiempo de CPU sin especificar un valor de peso especifico o porcion de cpu que toma el proceso. Por otro parte, es más conveniente usar CPUShares cuando necesito particionar los procesos de acuerdo al peso de las cargas.
 
 
 
 ### Referencias
 https://github.com/ICESI/so-containers
+https://docs.docker.com/engine/admin/resource_constraints/
+https://washraf.gitbooks.io/the-docker-ecosystem/content/Chapter%204/Section%204/cpu_control.html
