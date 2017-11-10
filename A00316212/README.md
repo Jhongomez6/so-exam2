@@ -38,7 +38,7 @@ El segundo parcial del curso sistemas operativos trata sobre el manejo de namesp
 
 ### Solución
 
-3. Prueba de concepto systemd y CPUQuota.
+### 3. Prueba de concepto systemd y CPUQuota.
 
 Primero verificamos que las pruebas a ejecutar sean en un solo nucleo de la CPU:
 
@@ -76,6 +76,28 @@ Si detenemos el servicetwo.service podemos apreciar que el otro servicio sigue c
 
 ![GitHub Logo2](Resources/IMG8.PNG)
 
+
+### 4. Prueba de concepto systemd y CPUShares.
+
+Con los siguientes comandos asignamos a un proceso el 25% del procesador y al otro el 75%:
+
+![GitHub Logo2](Resources/IMG10.PNG)
+
+Verificamos que este conrriendo los servicios con sin pasar los limites asignados:
+
+![GitHub Logo2](Resources/IMG11.PNG)
+
+Ahora bien, en el caso de que se cancele un servicio el otro servicio restante debe quedar con el 100% del procesador; para esto hacemos el siguiente script que se ejecutara cuando se termine el proceso 2:
+
+![GitHub Logo2](Resources/IMG9.PNG)
+
+Y configuramos el servicio 2 para que ejecute dicho script al ejecutar el comando stop:
+
+![GitHub Logo2](Resources/IMG12.PNG)
+
+Del mismo modo se haría para el otro servicio y quedará siempre el servicio restante con el 100% del procesador.
+
+### 5. Definiciones y comparación
 
 
 
